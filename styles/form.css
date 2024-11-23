@@ -1,0 +1,88 @@
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    
+    .event{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 2.5rem;
+    }
+
+    #form {
+        margin-top: 1.5rem;
+        font-family: "Roboto", serif;
+        max-width: 40%;
+
+        .input-wrapper{
+            display: flex;
+            flex-direction: column;
+            margin-top: 1rem;
+        } 
+
+        .initialEnd {
+            display: flex;
+            gap: .5rem;
+            margin-top: 1rem;
+            
+            .inicioFim {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            #dataIE {
+                color: var(--input-placehoder);
+            }
+            
+        }
+    }
+
+   .inputLT {
+    display: flex;
+    gap: .5rem;
+    margin-top: 1rem;
+    
+    .typeLocal{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+   }
+}
+
+@media(max-width: 600px){
+    body {
+        display: flex;
+        align-items: center;
+        overflow-x: hidden;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: .9rem;
+    }
+
+    .inputLT{
+        display: flex;
+        flex-direction: column;
+    }
+    .initialEnd{
+        display: flex;
+        flex-direction: column;
+    }
+    .emailName {
+        display: flex;
+        flex-direction: column;
+    }
+    .inputNameEmail{
+        max-width: 100%;
+    }
+    .descritionFooter{
+        font-size: .8rem;
+    }
+}
+

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inconsolata:wght@200..900&family=Maven+Pro:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Inconsolata:wght@200..900&family=Maven+Pro:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    
+    <h1>Crie seu convite</h1>
+    <div id="container">
+        
+        <form id="form">
+            <div class="event">
+                <img src="./icons/calendary.svg" alt="">
+                <h2> Sobre o evento</h2>
+            </div>
+            <div class="input-wrapper">
+                <label>Titulo</label>
+                <input type="text" id="nameEvent" placeholder="Nome do evento">
+            </div>
+
+            <div class="initialEnd">
+                <div class="inicioFim">
+                    <label>Inicio</label>
+                    <input type="date" id="dataIE">
+                </div>
+
+                <div class="inicioFim">
+                    <label>Fim</label>
+                    <input type="date" id="dataIE">
+                </div>
+            </div>
+
+            <div class="inputLT">
+                <div class="typeLocal">
+                    <label>Tipo</label>
+                   <input type="text" placeholder="Presencial / Online"> 
+                </div>
+                <div class="typeLocal">
+                    <label>Local</label>
+                   <input type="text" placeholder="Link do endereço"> 
+                </div>
+            </div>
+
+
+            <div class="inputClass">
+                <label>Descrição</label>
+                <input type="text" id="descrition" placeholder="Escreva sobre os detalhes do evento">
+            </div>
+        
+            <div class="dadosContat">
+                <div class="initialContat">
+                    <img src="./icons/calendari2.svg" alt="">
+                    <h3>Dados para contato</h3>
+                </div>
+    
+                <div class="inputName">
+                    <label>Nome</label>
+                    <input type="text" class="name required" placeholder="Nome completo" oninput="nameValidate()">
+                    <span class="danger">Seu nome deve ter no minimo 3 digitos</span>
+                </div>
+            </div>
+    
+            <div class="emailName">
+                <div class="inputNameEmail">
+                    <label>E-mail</label>
+                    <input type="email" class="email required" placeholder="exemplo@gmail.com" oninput="emailValidate()">
+                    <span class="danger">Digite um e-mail válido</span>
+                </div>
+                <div class="inputNameEmail">
+                    <label>Telefone</label>
+                    <input type="number" class="telefone required" placeholder="(99) 99999-9999" oninput="phoneValidate()">
+                    <span class="danger">Digite um número de telefone válido</span>
+                </div>
+            </div>
+            <div class="listra"></div>
+    
+            <footer>
+
+                    <div class="descritionFooter">
+                        <input type="checkbox" id="check">
+                        <p>Li e concordo com os <span>Termos e Condições</span> e com a <span>Política de Privacidade</span></p>
+                    </div>
+                    <div class="descritionFooter" id="check">
+                        <input type="checkbox">
+                        <p>Aceito receber atualizações e promoções por e-mail</p>
+                    </div>
+                    <div class="descritionFooter">
+                        <input type="checkbox" id="check">
+                        <p>Aceito receber atualizações e promoções por SMS</p>
+                    </div>
+    
+                <button id="btnFooter">Gerar convite</button>
+            </footer>
+        </form>
+
+
+    </div>
+
+   
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html> 
