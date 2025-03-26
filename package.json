@@ -1,0 +1,26 @@
+{
+  "name": "formulariodev",
+  "version": "1.0.0",
+  "description": "Formulario de convite.",
+  "main": "src/index.html",
+  "scripts": {
+    "cy:open": "cypress open",
+    "test:headless": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Szarblewski14/formulariodev"
+  },
+  "keywords": [
+    "Testing",
+    "Cypress.io",
+    "Cypress Cloud",
+    "GitHub Actions"
+  ],
+  "author": "Leonardo Laurindo Szarblewski",
+  "license": "MIT",
+  "homepage": "https://github.com/Szarblewski14/formulariodev",
+  "dependencies": {
+    "cypress": "^14.2.0"
+  }
+}
