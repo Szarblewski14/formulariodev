@@ -1,25 +1,33 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('PreencheOsCamposObrigatóriosEnvia', () => {
+    cy.get('.name')
+        .type('Leonardo Laurindo Szarblewski')
+    cy.get('.email')
+        .type('leo@gmail.com')
+    cy.get('.telefone')
+        .type('51 999999999')
+    cy.get('#btnFooter')
+        .click()
+        .should('have.value', '')
+})
+
+Cypress.Commands.add('PreencheElimpa', (data = {
+    firstName: 'leo',
+    email: 'leo@gmail.com',
+    phone: '99999999999'
+}) => {
+    cy.get('.name')
+        .invoke('val', data.firstName)
+        .should('be.visible')
+        .clear()
+        .should('have.value', '')
+    cy.get('.email')
+        .invoke('val', data.email)
+        .should('be.visible')
+        .clear()
+        .should('have.value', '')
+    cy.get('.telefone')
+        .invoke('val', data.phone)
+        .should('be.visible')
+        .clear()
+        .should('have.value', '')
+})
